@@ -4,9 +4,10 @@ import Body from "./component/Body";
 import Footer from "./component/Footer";
 
 function App(){
+  const name="이정환";
   return <div className="App">
      <Header />
-     <Body />
+     <Body name={name} location={'부천시'}/>
      <Footer />
     </div>
 }
