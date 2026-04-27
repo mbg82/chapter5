@@ -1,7 +1,13 @@
-function Body(props){
-    console.log(props);
+function Body(){
+    function handleOnClick(){
+        console.log(e)
+        console.log(e.target.name);
+    }
     return(
-        <div className="body">{props.name}은 {props.location}에 거주합니다.</div>
+        <div className="body">
+            <button name="A버튼" onClick={handleOnClick}>A 버튼</button>
+            <button name="B버튼" onClick={handleOnClick}>B 버튼</button>
+        </div>
     );
 }
 export default Body;
