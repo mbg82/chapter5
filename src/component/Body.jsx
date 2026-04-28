@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 function Body(){
-    const [count, setCount]=useState(0);
-    const onIncrease=()=>{
-        setCount(count +1);
+    const [text, setText]=useState("");
+    const handleOnChange=(e)=>{
+        console.log("변경된 값 : ", e.target.value);
+        setText(e.target.value);
     };
     return(
         <div>
-            <h2>{count}</h2>
-            <button onClick={onIncrease}>+</button>
+            <textarea value={text} onChange={handleOnChange}/>
         </div>
     );
 }
